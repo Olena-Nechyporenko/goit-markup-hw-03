@@ -1,6 +1,7 @@
 :root {
   --accent-color: #4d5ae5;
   --brand-color: #2e2f42;
+  --border-color: #e7e9fc;
 }
 
 /**
@@ -65,6 +66,7 @@ img {
 .nav {
   display: flex;
   margin-right: 332px;
+  align-items: center;
 }
 
 .logo,
@@ -144,7 +146,6 @@ img {
 .hero {
   background-color: var(--brand-color);
   padding: 188px 0;
-  margin-bottom: 120px;
 }
 .hero-heading {
   font-weight: 700;
@@ -170,10 +171,11 @@ img {
   cursor: pointer;
   padding: 16px 32px;
   min-width: 169px;
-  min-height: 56px;
+  height: 56px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -188,7 +190,7 @@ img {
   |============================
 */
 .features {
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 .features-hidden-heading {
   position: absolute;
@@ -209,10 +211,9 @@ img {
   letter-spacing: 0.02em;
   color: var(--brand-color);
   margin-bottom: 8px;
-  text-align: center;
 }
 .features-item {
-  width: 264px;
+  width: calc((100% - 72px) / 4);
 }
 
 .features-text {
@@ -231,8 +232,8 @@ img {
   | SECTION 3.WHAT ARE WE DOING
   |============================
 */
-.What-are-we-doing {
-  margin-bottom: 120px;
+.what-are-we-doing {
+  padding-bottom: 120px;
 }
 .heading {
   font-weight: 700;
@@ -249,6 +250,9 @@ img {
 .services-list {
   display: flex;
   gap: 24px;
+}
+.services-item {
+  width: calc((100% - 48px) / 3);
 }
 /**
   |============================
@@ -268,13 +272,21 @@ img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-  min-width: 264px;
-  min-height: 380px;
+  width: calc((100% - 72px) / 4);
+}
+.team-item-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--brand-color);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.team-item-container {
+  padding: 32px 16px;
 }
 
-.team-img {
-  margin-bottom: 32px;
-}
 .team-text {
   font-weight: 400;
   font-size: 16px;
@@ -297,10 +309,11 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
+  display: inline-block;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #f4f4fd;
+  margin-left: 0;
 }
 .logo-footer {
   font-family: 'Raleway', sans-serif;
@@ -321,7 +334,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  width: 264px;
+  max-width: 264px;
 }
 
 /**
@@ -383,6 +396,8 @@ img {
   color: var(--accent-color);
   background-color: #f4f4fd;
   cursor: pointer;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
   padding: 12px 24px;
   min-width: 69px;
   min-height: 48px;
@@ -392,6 +407,7 @@ img {
 .filter-button:focus {
   color: #ffffff;
   background-color: #404bbf;
+  border: 1px solid transparent;
 }
 
 /**
@@ -403,13 +419,18 @@ img {
   display: flex;
   flex-wrap: wrap;
   row-gap: 48px;
+  column-gap: 24px;
 }
 .portfolio-item {
-  border: 1px solid #e7e9fc;
-  width: calc((100%-48px) / 3);
+  border: 1px solid var();
+  width: calc((100% - 48px) / 3);
 }
 .portfolio-img {
   margin-bottom: 32px;
+}
+.portfolio-card-container {
+  padding: 32px 16px;
+  border: 1px solid var(--border-color);
 }
 .portfolio-title {
   font-weight: 500;
@@ -418,7 +439,6 @@ img {
   letter-spacing: 0.02em;
   color: var(--brand-color);
   margin-bottom: 8px;
-  padding-left: 16px;
 }
 
 .portfolio-text {
@@ -427,5 +447,4 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  padding-left: 16px;
 }
